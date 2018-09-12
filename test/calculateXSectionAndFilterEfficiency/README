@@ -1,0 +1,13 @@
+#Follow instructions https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer#Automated_scripts_to_compute_the
+
+# remove possible logs present
+rm *.log
+
+#Relevant command to launch (campaign and format are useless)
+#Cross-section calculated from 1M events
+
+./calculateXSectionAndFilterEfficiency.sh -f mc_bkg_2017.txt -n 1000000
+
+# At the end 
+mv *.log logreader
+cd logreader
